@@ -17,7 +17,7 @@ public class Main {
             if(leapYear(year) == days) {
                 socre++;
             }
-            else if (leapYear(year) == 366 && days != 366 || leapYear(year) == 365 && days != 365) {
+            else if (leapYear(year) != days) {
                 System.out.printf("Неправильно! В этом году %s дней!",leapYear(year));
                 System.out.printf("\nНабрано очков: %s",socre);
                 break;
