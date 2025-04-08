@@ -14,12 +14,11 @@ public class Main {
             System.out.println("Введите количество дней:");
             int days = sc.nextInt();
 
-            if(leapYear(year) == days) {
+            if (leapYear(year) == days) {
                 socre++;
-            }
-            else if (leapYear(year) != days) {
-                System.out.printf("Неправильно! В этом году %s дней!",leapYear(year));
-                System.out.printf("\nНабрано очков: %s",socre);
+            } else if (leapYear(year) != days) {
+                System.out.printf("Неправильно! В этом году %s дней!", leapYear(year));
+                System.out.printf("\nНабрано очков: %s", socre);
                 break;
             }
         }
@@ -27,12 +26,9 @@ public class Main {
     }
 
     public static int leapYear(int inputYear) {
-        if (inputYear % 4 == 0 && inputYear % 100 != 0 || inputYear % 400 == 0) {
-            return 366;
-        } else {
-            return 365;
+        return (inputYear % 4 == 0 && inputYear % 100 != 0 || inputYear % 400 == 0) ? 366 : 365;
+
         }
     }
-}
 
 
